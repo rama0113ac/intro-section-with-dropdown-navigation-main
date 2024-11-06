@@ -261,3 +261,18 @@ body {
         padding-right: 0;
     }
 }
+
+@media (max-width: 767px) {
+    .logo-img {
+      height: 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    .d-flex {
+        gap: 8px;  
+    }
+
+    .logo-img {
+        height: 16px;  
+    }
+}
