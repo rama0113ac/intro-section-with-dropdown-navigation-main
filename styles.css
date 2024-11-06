@@ -1,0 +1,263 @@
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #FAFAFA;
+    margin: 0;
+    padding: 0;
+}
+
+.main-heading {
+    margin-top: 45px;
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.btn-dark {
+    margin-top: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: transparent;
+    color: #020202;
+    border-color: #000;
+}
+
+.logo-img {
+    margin-top: 20px;
+    margin-right: 1rem;
+    object-fit: contain;
+}
+
+.person-image {
+    max-width: 360px;
+    width: 100%;
+    align-self: flex-end;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 30px;
+}
+
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    min-width: 100px !important;
+    height: 130px;
+    color: #050505;
+    overflow: visible;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+    color: #333;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu li a:hover {
+    color: #000;
+}
+
+.dropdown-menu li a .icon {
+    font-size: 0.7rem;
+    margin-right: 6px;
+}
+
+.nav-link {
+    position: relative;
+    color: #6b6b6b;
+    font-weight: normal;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.nav-link .dropdown-icon {
+    margin-left: 4px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.register-btn {
+    border: 2px solid #000;
+    color: #6b6b6b;
+    padding: 8px 16px;
+    width: 100px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    transition: transform 0.2s ease;
+    color: #020202;
+    background-color: transparent;
+    font-weight: 600;
+    border-color: #000;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1049;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar .submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.sidebar .submenu a {
+    font-weight: normal;
+    color: #555;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.sidebar .submenu a img {
+    margin-right: 10px;
+}
+
+.navbar-toggler-icon,
+.close-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.toggle-icon {
+    font-size: 12px;
+}
+
+.sidebar .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar .login-btn {
+    width: 80%;
+    margin-left: 150px !important;
+    margin: 5px 0;
+}
+
+.sidebar .register-btn {
+    width: 80%;
+    margin: 5px 0;
+}
+
+@media (max-width: 767px) {
+    .main-heading {
+        font-size: 3.0rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .person-image.d-md-none {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
